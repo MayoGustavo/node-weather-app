@@ -38,7 +38,7 @@ app.get('/help', (req, res) => {
     res.render('help', {
         title: "Help",
         name: "Gustavo Mayo",
-        description: "Help text"
+        description: "Retrieve instant, accurate weather information for any location in the world."
     })
 })
 

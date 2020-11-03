@@ -20,7 +20,7 @@ const getWeather = (lat, lon, callback) => {
             const location = body.location
 
             callback(undefined, {
-                description: current.weather_descriptions[0] + ". It is currently " + current.temperature + " degress out. There is a " + current.precip + "% chance of rain.",
+                description: current.weather_descriptions[0] + ". It is currently " + current.temperature + " degress out, the UV index is " + current.uv_index + " and the humidity is " + current.humidity + "%. There is a " + current.precip + "% chance of rain.",
                 location: location.name + ", " + location.region + ", " + location.country
             })
 
