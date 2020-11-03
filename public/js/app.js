@@ -1,5 +1,3 @@
-console.log('Client side java script file is loaded!')
-
 const weatherForm = document.querySelector('form')
 const inputElement = document.querySelector('input')
 const messageOne = document.getElementById("message1")
@@ -11,7 +9,7 @@ weatherForm.addEventListener('submit', (e) => {
     messageTwo.textContent = ""
     e.preventDefault()
   
-    const url='http://localhost:3000/weather?address='+inputElement.value
+    const url='/weather?address='+inputElement.value
 
     fetch(url).then((response) => {
         response.json().then((data) => {

@@ -5,7 +5,7 @@ const localizationHelper = require('./utils/geo-localization')
 const weatherHelper = require('./utils/weather')
 
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000
 
 // Define paths for express configuration.
 const publicDirectoryPath = path.join(__dirname, "..", "public")
@@ -91,5 +91,5 @@ app.get('*', (req, res) => {
 
 
 app.listen(port, () => {
-    console.log('Example app listening at http://localhost:'+port)
+    console.log(`Listening on ${ port }`)
 })
